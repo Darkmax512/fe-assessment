@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AppIcons from "~/@main/core/AppIcons";
 import { CarType } from "~/app/store/types/mainApi-types";
 import clsx from "clsx";
@@ -14,14 +14,16 @@ const CarCard = ({ car }: Props) => {
 
   const addCarToFav = (car: number) => {
     setOldData((prev) => {
-      const prev1 = [...prev];
-      const carIndex = prev1.indexOf(car);
-      if (carIndex === -1) prev1.push(car);
-      else prev1.splice(carIndex, 1);
-      localStorage.setItem("Cars", JSON.stringify(prev1));
-      return [...prev1];
+      const carIndex = oldData.indexOf(car);
+      if (carIndex === -1) oldData.push(car);
+      else oldData.splice(carIndex, 1);
+      console.log(carIndex);
+      return [...oldData];
     });
   };
+  useEffect(() => {
+    localStorage.setItem("Cars", JSON.stringify(oldData));
+  }, [oldData]);
   return (
     <div className="bg-white select-none cursor-pointer shadow-md text-gray-dark-3 rounded-[16px] p-6 flex flex-col gap-3 justify-between min-w-[325px] max-w-[350px] h-72 items-start">
       <div className="w-full">

@@ -74,12 +74,20 @@ const Navigation = ({ setSidebarOpen, sidebarOpen }: Props) => {
                 <div className="mt-5 h-0 flex-1 overflow-y-auto flex flex-col justify-between">
                   <nav className="space-y-1 px-2">
                     {navigationConfig.map((item) => (
-                      <NavItem onClick={setSidebarOpen} item={item} />
+                      <NavItem
+                        key={item.id}
+                        onClick={setSidebarOpen}
+                        item={item}
+                      />
                     ))}
                   </nav>
                   <nav className="px-2">
                     {utilsNavigationConfig.map((item) => (
-                      <NavItem onClick={setSidebarOpen} item={item} />
+                      <NavItem
+                        key={item.id}
+                        onClick={setSidebarOpen}
+                        item={item}
+                      />
                     ))}
                   </nav>
                 </div>
@@ -101,12 +109,12 @@ const Navigation = ({ setSidebarOpen, sidebarOpen }: Props) => {
           <div className="mt-5 flex flex-grow flex-col justify-between">
             <nav className="flex-1 space-y-1 px-2 pb-4">
               {navigationConfig.map((item) => (
-                <NavItem item={item} />
+                <NavItem key={item.id} item={item} />
               ))}
             </nav>
             <nav className="px-2">
               {utilsNavigationConfig.map((item) => (
-                <NavItem item={item} />
+                <NavItem key={item.id} item={item} />
               ))}
             </nav>
           </div>
