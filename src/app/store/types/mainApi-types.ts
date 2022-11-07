@@ -14,4 +14,5 @@ export type CarType = {
   img: string;
   price: number;
   fav?: boolean;
+  state: "old" | "new";
 };

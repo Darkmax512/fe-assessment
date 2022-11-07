@@ -16,7 +16,7 @@ export const mainApi = createApi({
     }),
     cars: query<CarType[], null>({
       query: () => ({
-        url: "e8189eeb-8fcb-4c8d-9d32-62c6ca8c9133",
+        url: "d7727c4d-d4a7-4a0d-8653-54271cc3a927",
       }),
       providesTags: ["Cars"],
     }),

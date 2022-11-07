@@ -5,9 +5,13 @@ type Props = {};
 
 const selectOne = [
   {
+    lable: "All",
+    value: "",
+    selected: true,
+  },
+  {
     lable: "New",
     value: "new",
-    selected: true,
   },
   {
     lable: "Old",
@@ -17,13 +21,25 @@ const selectOne = [
 
 const selectTwo = [
   {
+    lable: "All",
+    value: "",
+    selected: true,
+  },
+  {
     lable: "Toyota",
     value: "toyota",
-    selected: true,
   },
   {
     lable: "Porshe",
     value: "porshe",
+  },
+  {
+    lable: "Mercedes",
+    value: "mercedes",
+  },
+  {
+    lable: "Suzuki",
+    value: "suzuki",
   },
 ];
 
@@ -33,8 +49,8 @@ const BookingHeader = (props: Props) => {
       <h1>Booking</h1>
       <div>
         <div className="flex gap-2">
-          <SelectInput data={selectOne} />
-          <SelectInput data={selectTwo} />
+          <SelectInput name="state" data={selectOne} />
+          <SelectInput name="carKind" data={selectTwo} />
         </div>
       </div>
     </div>

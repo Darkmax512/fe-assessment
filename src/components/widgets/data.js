@@ -33,7 +33,8 @@
     "system": "Manual",
     "type": "Coupe",
     "img": "/assets/car-audi-a3.svg",
-    "price": 600
+    "price": 600,
+    "state": "new"
   },
   {
     "id": 2,
@@ -42,7 +43,8 @@
     "system": "Auto",
     "type": "Sedan",
     "img": "/assets/2014-mercedes-benz.svg",
-    "price": 800
+    "price": 800,
+    "state": "new"
   },
   {
     "id": 3,
@@ -51,7 +53,8 @@
     "system": "Manual",
     "type": "Coupe",
     "img": "/assets/maruti-suzuki.svg",
-    "price": 600
+    "price": 600,
+    "state": "new"
   },
   {
     "id": 4,
@@ -60,7 +63,8 @@
     "system": "Manual",
     "type": "Coupe",
     "img": "/assets/suzuki-ertiga.svg",
-    "price": 600
+    "price": 600,
+    "state": "new"
   },
   {
     "id": 5,
@@ -69,7 +73,8 @@
     "system": "Auto",
     "type": "Coupe",
     "img": "/assets/toyota-innova.svg",
-    "price": 900
+    "price": 900,
+    "state": "new"
   },
   {
     "id": 6,
@@ -78,7 +83,8 @@
     "system": "Auto",
     "type": "Coupe",
     "img": "/assets/white car.svg",
-    "price": 500
+    "price": 500,
+    "state": "old"
   },
   {
     "id": 7,
@@ -87,7 +93,8 @@
     "system": "Manual",
     "type": "Coupe",
     "img": "/assets/car-audi-a3.svg",
-    "price": 600
+    "price": 600,
+    "state": "old"
   },
   {
     "id": 8,
@@ -96,7 +103,8 @@
     "system": "Auto",
     "type": "Sedan",
     "img": "/assets/2014-mercedes-benz.svg",
-    "price": 800
+    "price": 800,
+    "state": "old"
   },
   {
     "id": 9,
@@ -105,6 +113,7 @@
     "system": "Manual",
     "type": "Coupe",
     "img": "/assets/maruti-suzuki.svg",
-    "price": 600
+    "price": 600,
+    "state": "new"
   }
 ]

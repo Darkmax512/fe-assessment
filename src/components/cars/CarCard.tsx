@@ -14,16 +14,14 @@ const CarCard = ({ car }: Props) => {
 
   const addCarToFav = (car: number) => {
     setOldData((prev) => {
+      let data = JSON.parse(localStorage.getItem("Cars") || "[]");
       const carIndex = oldData.indexOf(car);
-      if (carIndex === -1) oldData.push(car);
-      else oldData.splice(carIndex, 1);
-      console.log(carIndex);
-      return [...oldData];
+      if (carIndex === -1) data = [...data, car];
+      else data.splice(carIndex, 1);
+      localStorage.setItem("Cars", JSON.stringify(data));
+      return [...data];
     });
   };
-  useEffect(() => {
-    localStorage.setItem("Cars", JSON.stringify(oldData));
-  }, [oldData]);
   return (
     <div className="bg-white select-none cursor-pointer shadow-md text-gray-dark-3 rounded-[16px] p-6 flex flex-col gap-3 justify-between min-w-[325px] max-w-[350px] h-72 items-start">
       <div className="w-full">
