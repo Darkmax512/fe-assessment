@@ -47,10 +47,18 @@ const BookingHeader = (props: Props) => {
   return (
     <div className="flex flex-col gap-4 p-4 px-7">
       <h1>Booking</h1>
-      <div>
+      <div className="flex justify-between ">
         <div className="flex gap-2">
           <SelectInput name="state" data={selectOne} />
           <SelectInput name="carKind" data={selectTwo} />
+        </div>
+        <div className="flex gap-2 h-4 items-center">
+          <div className="cursor-pointer -mb-2">
+            <img src="/assets/icon.svg" alt="" />
+          </div>
+          <div className="cursor-pointer">
+            <img src="/assets/filter.svg" alt="" />
+          </div>
         </div>
       </div>
     </div>

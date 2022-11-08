@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import AppIcons from "~/@main/core/AppIcons";
 import { NavigationConfigTypes } from "~/@main/types/Config-Types";
 import clsx from "clsx";
@@ -10,13 +10,14 @@ type Props = {
 };
 
 const NavItem = ({ item, onClick }: Props) => {
+  const { pathname } = useLocation();
   return (
     <Link
       key={item.id}
       to={item.url}
       onClick={() => onClick && onClick(false)}
       className={clsx(
-        item.current
+        item.url === pathname.substring(1)
           ? "bg-gray-100 text-gray-900"
           : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
         "group flex items-center px-2 py-2 text-base font-medium rounded-md"

@@ -1,5 +1,6 @@
 import { NavigationConfigTypes } from "~/@main/types/Config-Types";
 
+// Main Navigation Configs With Full type Support
 const navigationConfig: NavigationConfigTypes[] = [
   {
     id: "Dashboard-page",
