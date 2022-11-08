@@ -1,12 +1,12 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { CarType, WidgetsRes } from "./types/mainApi-types";
+import { CarType, SaleCard, WidgetsRes } from "./types/mainApi-types";
 
 export const mainApi = createApi({
   reducerPath: "mainApi",
   baseQuery: fetchBaseQuery({
     baseUrl: `https://mocki.io/v1/`,
   }),
-  tagTypes: ["Main", "Cars"],
+  tagTypes: ["Main", "Cars", "Sales"],
   endpoints: ({ query }) => ({
     widgets: query<WidgetsRes[], null>({
       query: () => ({
@@ -20,7 +20,13 @@ export const mainApi = createApi({
       }),
       providesTags: ["Cars"],
     }),
+    saleCards: query<SaleCard[], null>({
+      query: () => ({
+        url: "4998e573-e7ac-480d-8ede-bed56046044f",
+      }),
+      providesTags: ["Sales"],
+    }),
   }),
 });
 
-export const { useWidgetsQuery, useCarsQuery } = mainApi;
+export const { useWidgetsQuery, useCarsQuery, useSaleCardsQuery } = mainApi;

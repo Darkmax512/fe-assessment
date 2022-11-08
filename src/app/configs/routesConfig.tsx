@@ -10,7 +10,7 @@ const routes: AppRouteObject[] = [
   ...AppUtils.generateRoutesFromConfigs(routeConfigs, []),
   {
     path: "/",
-    element: <Navigate to="/home" />,
+    element: <Navigate to="/dashboard" />,
   },
 ];
 

@@ -16,3 +16,13 @@ export type CarType = {
   fav?: boolean;
   state: "old" | "new";
 };
+
+export type SaleCard = {
+  id: string;
+  recommend: number;
+  name: string;
+  price: number;
+  total: number;
+  img: string;
+  color: string;
+};
