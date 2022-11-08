@@ -1,5 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { CarType, SaleCard, WidgetsRes } from "./types/mainApi-types";
+import {
+  CarType,
+  InfoCardType,
+  SaleCard,
+  WidgetsRes,
+} from "./types/mainApi-types";
 
 export const mainApi = createApi({
   reducerPath: "mainApi",
@@ -26,7 +31,18 @@ export const mainApi = createApi({
       }),
       providesTags: ["Sales"],
     }),
+    infoCards: query<InfoCardType[], null>({
+      query: () => ({
+        url: "3ed395b7-4948-41f2-9cbb-92e2bde10b05",
+      }),
+      providesTags: ["Sales"],
+    }),
   }),
 });
 
-export const { useWidgetsQuery, useCarsQuery, useSaleCardsQuery } = mainApi;
+export const {
+  useWidgetsQuery,
+  useCarsQuery,
+  useSaleCardsQuery,
+  useInfoCardsQuery,
+} = mainApi;

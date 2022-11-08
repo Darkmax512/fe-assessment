@@ -27,12 +27,15 @@ const CarCard = ({ car }: Props) => {
       <div className="w-full">
         <div className="flex flex-1 w-full justify-between">
           <h3 className="text-primary-dark-1">{car.name}</h3>
-          <div onClick={() => addCarToFav(car.id)}>
+          <div
+            className="active:animate-ping"
+            onClick={() => addCarToFav(car.id)}
+          >
             <AppIcons
               icon="HeartIcon:outline"
               className={clsx(
-                oldData.includes(car.id) ? "fill-red-600" : "",
-                "cursor-pointer active:scale-125 text-gray-dark-6 h-5 w-5"
+                oldData.includes(car.id) ? "fill-red-600 animate-bounce" : "",
+                "cursor-pointer text-gray-dark-6 h-5 w-5 "
               )}
             />
           </div>

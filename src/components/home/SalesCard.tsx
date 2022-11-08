@@ -10,7 +10,7 @@ const SalesCard = ({ card }: Props) => {
   return (
     <div
       style={{ backgroundColor: card.color }}
-      className="w-full md:min-w-[318px] rounded-2xl h-[236px] bg-[#F4E3E5] py-4 px-7 flex flex-col items-start justify-between"
+      className="w-full md:min-w-[250px] rounded-2xl h-[236px] bg-[#F4E3E5] py-4 px-7 flex flex-col items-start justify-between"
     >
       <div className="flex gap-2 text-[24px]">
         <AppIcons icon="ArrowPathIcon:solid" className="h-8 w-8" />

@@ -147,3 +147,32 @@
 //     "color": "#F4E3E5"
 //   }
 // ]
+
+[
+  {
+    "id": "info-1",
+    "span": true,
+    "img": "/assets/Group.svg",
+    "data": "Apply for a car loan !",
+    "disc": "This is a sample of a generated text",
+    "action": "Discover More",
+    "url": "/booking",
+    "color": "#FFE0BA"
+  },
+  {
+    "id": "info-2",
+    "span": false,
+    "img": "/assets/52. trophy-4.svg",
+    "data": "You have earned 20 Badges!",
+    "disc": "Hooray! Way to go Mohammed!",
+    "color": "#0F2837"
+  },
+  {
+    "id": "info-3",
+    "span": false,
+    "img": "/assets/people-rushing-3.svg",
+    "data": "You have earned 1500 Points!",
+    "disc": "Redeem and claim your rewards!",
+    "color": "#6E1946"
+  }
+]

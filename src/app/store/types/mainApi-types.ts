@@ -26,3 +26,14 @@ export type SaleCard = {
   img: string;
   color: string;
 };
+
+export type InfoCardType = {
+  id: string;
+  span: boolean;
+  img: string;
+  data: string;
+  disc: string;
+  action?: string;
+  url?: string;
+  color: string;
+};
